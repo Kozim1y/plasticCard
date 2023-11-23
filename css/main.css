@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  background-image: linear-gradient(to top, black, rgb(184, 110, 0));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 600px;
+  height: 350px;
+  padding: 30px;
+  background-image: linear-gradient(to top, rgb(146, 146, 0), rgb(0, 95, 0));
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(72, 255, 0);
+  transform: rotate(50deg);
+  transition: all 0.5s linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.card-type p {
+  font-size: 26px;
+  font-weight: bold;
+  transition: all 2s ease;
+  transform: translateX(400px);
+}
+
+.card-type div {
+  width: 70px;
+  height: 50px;
+  background-color: rgb(201, 201, 1);
+  border-radius: 10px;
+}
+
+.card-number {
+  margin-top: 50px;
+}
+
+.card-number h2 {
+  transition: all 2s ease;
+  transform: translateX(420px);
+}
+
+.card-number p {
+  margin-top: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  transition: all 2s ease;
+  transform: translateX(280px);
+}
+
+.card-name h1 {
+  transition: all 2s ease;
+  transform: translateX(240px);
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card:hover .card-type p,
+.card:hover .card-number h2,
+.card:hover .card-number p,
+.card:hover .card-name h1 {
+  transform: translateX(0);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+}
+
+.leaf1 {
+  width: 150px;
+  top: -150px;
+  left: 0;
+  opacity: 0.1;
+  animation: 10s leaf1 1s infinite linear;
+}
+
+@keyframes leaf1 {
+  0% {
+    transform: translateY(0);
+  } 99% {
+    transform: translateY(900px) translateX(100px) rotate(360deg);
+  } 100% {
+    opacity: 0;
+  }
+}
+
+.leaf2 {
+  width: 50px;
+  top: -50px;
+  left: 20%;
+  opacity: 0.4;
+  animation: 50s leaf2 4s infinite linear;
+  z-index: -1;
+}
+
+@keyframes leaf2 {
+  0% {
+    transform: translateY(0);
+  } 25% {
+    transform: translateY(200px) translateX(2000px) rotate(360deg);
+  } 50% {
+    transform: translateY(400px) translateX(-500px) rotate(0deg);
+  } 75% {
+    transform: translateY(600px) translateX(2000px) rotate(360deg);
+  } 100% {
+    transform: translateY(900px) translateX(-500px) rotate(0deg);
+  }
+}
+
+.leaf3 {
+  width: 800px;
+  top: -800px;
+  left: 50%;
+  opacity: 0.04;
+  animation: 20s leaf3 2s infinite linear;
+  z-index: -1;
+}
+
+@keyframes leaf3 {
+  0% {
+    transform: translateY(0);
+  } 99% {
+    transform: translateY(1200px) translateX(-1000px) rotate(360deg);
+  } 100% {
+    opacity: 0;
+  }
+}
+
+.leaf4 {
+  width: 100px;
+  top: -100px;
+  right: 10%;
+  opacity: 0.1;
+  animation: 15s leaf4 infinite linear;
+  z-index: -1;
+}
+
+@keyframes leaf4 {
+  0% {
+    transform: translateY(0);
+  } 99% {
+    transform: translateY(1000px) rotate(-180deg);
+  } 100% {
+    opacity: 0;
+  }
+}
+
+.leaf5 {
+  width: 80px;
+  top: 500px;
+  left: -80px;
+  opacity: 0.1;
+  animation: 8s leaf5 3s infinite linear alternate;
+  z-index: -1;
+}
+
+@keyframes leaf5 {
+  0% {
+    transform: translateX(0) translateY(500px);
+  }100% {
+    transform: translateX(3000px) rotate(180deg);
+  }
+}
